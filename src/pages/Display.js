@@ -36,6 +36,12 @@ Q3: ${userData?.answers2?.q6 || "Not answered"}`
         <p><strong>Pre Activity 3:</strong> {userData?.answers1?.q3 || "Not answered"}</p>
       </div>
 
+    <br></br>
+    
+      <div className="display-box">
+        <p><strong>Pre Activity Stress Value:</strong> {userData?.sliderValue || "Not answered"}</p>
+      </div>
+
       <br></br>
 
       <h3 className="display-subtitle">Post Activity Responses</h3>
@@ -44,6 +50,12 @@ Q3: ${userData?.answers2?.q6 || "Not answered"}`
         <p><strong>Post Activity 2:</strong> {userData?.answers2?.q5 || "Not answered"}</p>
         <p><strong>Post Activity 3:</strong> {userData?.answers2?.q6 || "Not answered"}</p>
       </div>
+
+      <div className="display-box">
+        <p><strong>Post Activity Stress Value:</strong> {userData?.postSliderValue || "Not answered"}</p>
+      </div>
+
+      <br></br>
 
       <div className="button-container" style={{ marginLeft: "100px" }}>
         {/* Send Mail Button */}
