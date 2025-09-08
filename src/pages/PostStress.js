@@ -4,7 +4,7 @@ import { UserContext } from "./UserContext";
 import "./PostStress.css";
 
 function Stress() {
-  const { setUserData } = useContext(UserContext);
+  const { userData ,  setUserData } = useContext(UserContext);
   const [value, setValue] = useState(5); // default midpoint
   const [touched, setTouched] = useState(false);
   const [error, setError] = useState(false);
@@ -18,7 +18,10 @@ function Stress() {
 
   const handleSaveAndNext = () => {
     if (touched) {
-      setUserData((prev) => ({ ...prev, sliderValue: value }));
+      setUserData((prev) => ({ ...prev, postSliderValue: value}));
+      console.log("Updated userData:", { ...userData, postSliderValue: value });
+      
+      // setUserData((prev) => ({ ...prev, sliderValue: value }));
       navigate("/questionspost");
     } else {
       setError(true);
@@ -46,6 +49,7 @@ function Stress() {
             min="1"
             max="10"
             step="1"
+            name="Post Stress Value"
             value={value}
             onChange={handleSliderChange}
             className={`slider ${error ? "error-border" : ""}`}
