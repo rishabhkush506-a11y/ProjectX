@@ -14,11 +14,13 @@ Group: ${userData?.group || "Not provided"}
 Q1: ${userData?.answers1?.q1 || "Not answered"}
 Q2: ${userData?.answers1?.q2 || "Not answered"}
 Q3: ${userData?.answers1?.q3 || "Not answered"}
-
+Stress Value: ${userData?.sliderValue || "Not answered"}
 --- Post Responses ---
 Q1: ${userData?.answers2?.q4 || "Not answered"}
 Q2: ${userData?.answers2?.q5 || "Not answered"}
-Q3: ${userData?.answers2?.q6 || "Not answered"}`
+Q3: ${userData?.answers2?.q6 || "Not answered"}
+Stress Value: ${userData?.postSliderValue || "Not answered"}
+`
   );
 
   return (
