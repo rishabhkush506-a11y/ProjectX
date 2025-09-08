@@ -11,7 +11,7 @@ export default function Activity1dPage() {
   const navigate = useNavigate();
 
   const goToNextPage = () => {
-    if (mantra.trim() === "" || visual.trim() === "") {
+    if (mantra.trim() === "") {
       setError(true);
       return;
     }
@@ -58,7 +58,7 @@ export default function Activity1dPage() {
 
         {error && (
           <p className="error-message">
-            Please fill in both fields before continuing.
+            Please fill the field before continuing.
           </p>
         )}
 
