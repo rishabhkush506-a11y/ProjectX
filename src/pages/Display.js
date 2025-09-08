@@ -31,12 +31,10 @@ Q3: ${userData?.answers2?.q6 || "Not answered"}`
 
       <h3 className="display-subtitle">Pre Activity Responses</h3>
       <div className="display-box">
-        <p><strong>Pre Activity 1:</strong> {userData?.answers1?.q1 || "Not answered"}</p>
-        <p><strong>Pre Activity 2:</strong> {userData?.answers1?.q2 || "Not answered"}</p>
-        <p><strong>Pre Activity 3:</strong> {userData?.answers1?.q3 || "Not answered"}</p>
+        <p><strong>Pre Activity Q1:</strong> {userData?.answers1?.q1 || "Not answered"}</p>
+        <p><strong>Pre Activity Q2:</strong> {userData?.answers1?.q2 || "Not answered"}</p>
+        <p><strong>Pre Activity Q3:</strong> {userData?.answers1?.q3 || "Not answered"}</p>
       </div>
-
-    <br></br>
     
       <div className="display-box">
         <p><strong>Pre Activity Stress Value:</strong> {userData?.sliderValue || "Not answered"}</p>
@@ -46,9 +44,9 @@ Q3: ${userData?.answers2?.q6 || "Not answered"}`
 
       <h3 className="display-subtitle">Post Activity Responses</h3>
       <div className="display-box">
-        <p><strong>Post Activity 1:</strong> {userData?.answers2?.q4 || "Not answered"}</p>
-        <p><strong>Post Activity 2:</strong> {userData?.answers2?.q5 || "Not answered"}</p>
-        <p><strong>Post Activity 3:</strong> {userData?.answers2?.q6 || "Not answered"}</p>
+        <p><strong>Post Activity Q1:</strong> {userData?.answers2?.q4 || "Not answered"}</p>
+        <p><strong>Post Activity Q2:</strong> {userData?.answers2?.q5 || "Not answered"}</p>
+        <p><strong>Post Activity Q3:</strong> {userData?.answers2?.q6 || "Not answered"}</p>
       </div>
 
       <div className="display-box">
