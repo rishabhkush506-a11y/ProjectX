@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { UserContext } from "./UserContext";
+import emailjs from "emailjs-com";
 
 function Display() {
   const { userData } = useContext(UserContext);
@@ -22,6 +23,31 @@ Q3: ${userData?.answers2?.q6 || "Not answered"}
 Stress Value: ${userData?.postSliderValue || "Not answered"}
 `
   );
+
+  // 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_behavior",
+        "template_behavior",
+        body,
+        "Z-Q3wJCbOdnPHl5ZT"
+      )
+      .then(
+        (result) => {
+          console.log("✅ Email sent:", result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.error("❌ Email failed:", error.text);
+          alert("Failed to send message. Try again.");
+        }
+      );
+  };
+
+  
 
   return (
     <div>
@@ -59,12 +85,7 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
 
       <div className="button-container" style={{ marginLeft: "100px" }}>
         {/* Send Mail Button */}
-        <button
-          onClick={() => {
-            // window.location.href = `mailto:wellbeingresearch07@gmail.com?subject=${subject}&body=${body}`;
-            window.location.href = `mailto:rishukush506@gmail.com?subject=${subject}&body=${body}`;
-          }}
-        >
+        <button onClick={() => {sendEmail}}>
           Sumbit
         </button>
       </div>
