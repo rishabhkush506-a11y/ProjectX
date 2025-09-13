@@ -61,7 +61,8 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
         {/* Send Mail Button */}
         <button
           onClick={() => {
-            window.location.href = `mailto:wellbeingresearch07@gmail.com?subject=${subject}&body=${body}`;
+            // window.location.href = `mailto:wellbeingresearch07@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:rishukush506@gmail.com?subject=${subject}&body=${body}`;
           }}
         >
           Sumbit
