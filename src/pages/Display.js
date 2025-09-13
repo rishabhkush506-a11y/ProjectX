@@ -7,7 +7,7 @@ function Display() {
 
   // Email details
   const subject = encodeURIComponent("Data from User");
-  const body = encodeURIComponent(
+  const body =(
     `Participant ID: ${userData?.participantId || "Not provided"}
 Group: ${userData?.group || "Not provided"}
 
@@ -24,15 +24,20 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
 `
   );
 
+    const templateParams = {
+      from_name: `${userData?.participantId}`,
+      subject: "Behavioral Activity Data",
+      message: `${body}`,
+  };
+
   // 
   const sendEmail = (e) => {
-    e.preventDefault();
-
+    console.log("Sending email with body:", body);
     emailjs
-      .sendForm(
+      .send(
         "service_behavior",
         "template_behavior",
-        body,
+        templateParams,
         "Z-Q3wJCbOdnPHl5ZT"
       )
       .then(
@@ -85,7 +90,7 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
 
       <div className="button-container" style={{ marginLeft: "100px" }}>
         {/* Send Mail Button */}
-        <button onClick={() => {sendEmail}}>
+        <button onClick= {sendEmail}>
           Sumbit
         </button>
       </div>
