@@ -59,13 +59,6 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
 
       <div className="button-container" style={{ marginLeft: "100px" }}>
         {/* Send Mail Button */}
-        // <a
-        //   href={`mailto:wellbeingresearch07@gmail.com?subject=${subject}&body=${body}`}
-        //   className="next-button"
-          
-        // >
-        //   Submit
-        // </a>
         <button
           onClick={() => {
             window.location.href = `mailto:wellbeingresearch07@gmail.com?subject=${subject}&body=${body}`;
