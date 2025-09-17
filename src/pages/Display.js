@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { UserContext } from "./UserContext";
 import emailjs from "emailjs-com";
+import "./Display.css";
 
 function Display() {
   const { userData } = useContext(UserContext);
@@ -21,6 +22,8 @@ Q1: ${userData?.answers2?.q4 || "Not answered"}
 Q2: ${userData?.answers2?.q5 || "Not answered"}
 Q3: ${userData?.answers2?.q6 || "Not answered"}
 Stress Value: ${userData?.postSliderValue || "Not answered"}
+--- Feedback ---
+Feedback: ${userData?.feedback || "Not provided"}
 `
   );
 
@@ -55,7 +58,8 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
   
 
   return (
-    <div>
+    <div className="container">
+      <div className="form-box">
       <h1>Summary of Your Responses</h1>
       <p><b>Participant ID:</b> {userData.participantId}</p>
       <p><b>Group:</b> {userData.group}</p>
@@ -88,12 +92,18 @@ Stress Value: ${userData?.postSliderValue || "Not answered"}
 
       <br></br>
 
-      <div className="button-container" style={{ marginLeft: "100px" }}>
+      <h3 className="display-subtitle">Feedback</h3>
+      <div className="display-box">
+        <p>{userData?.feedback || "Not provided"}</p>
+      </div>
+        <div className="button-container">
         {/* Send Mail Button */}
-        <button onClick= {sendEmail}>
+        <button className="save-btn" onClick= {sendEmail}>
           Sumbit
         </button>
       </div>
+      </div>
+      
     </div>
   );
 }

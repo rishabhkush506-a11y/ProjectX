@@ -31,7 +31,7 @@ function PostQuestions() {
 
     setUserData((prev) => ({ ...prev, answers2: form }));
     console.log("Updated userData:", { ...userData, answers2: form });
-    navigate("/display");
+    navigate("/feedback");
         
   };
 

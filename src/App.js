@@ -32,6 +32,7 @@ import Activity5aPage from "./pages/Activity5/Activity5aPage";
 import Activity5bPage from "./pages/Activity5/Activity5bPage";
 import Activity5cPage from "./pages/Activity5/Activity5cPage";
 import Activity5dPage from "./pages/Activity5/Activity5dPage";
+import Feedback from "./pages/Feedback";
 // import Situation from "./pages/Situation";
 
 
@@ -82,6 +83,8 @@ function App() {
         <Route path="/activity5d" element={<Activity5dPage />} />
 
         <Route path="/group2" element={<Activity2Page />} />
+
+        <Route path="/feedback" element={<Feedback />} />
 
       </Routes>
     </Router>
